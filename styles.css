@@ -1,0 +1,83 @@
+/* Reset default margin and padding, and use border-box box-sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: auto;
+}
+
+/* Set the font-family to Poppins */
+.main_div{
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom,palegoldenrod,white);
+  position: relative;
+  height: 100vh;
+  width: 100%;
+
+
+
+  
+}
+.calendar{
+  display: flex;
+  align-items: center;
+
+  width: 80vh;
+  height: 50vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+}
+.right,.left{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 2rem;
+  width: 100%;
+  gap: 2rem;
+}
+.left{
+  background-color: red;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+.right{
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  background-color: black;
+}
+#date{
+  font-size: 5rem;
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 500px) {
+  .calendar {
+    flex-direction: column;
+    width: 40vh;
+      }
+      .left{
+        border-top-right-radius: 12px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+      }
+      .right{
+
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+      }
+}
